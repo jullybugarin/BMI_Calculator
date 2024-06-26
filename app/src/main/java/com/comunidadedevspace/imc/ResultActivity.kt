@@ -4,8 +4,17 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.red
+import androidx.core.graphics.toColorInt
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.comunidadedevspace.imc.R.color.bright_red
+import com.comunidadedevspace.imc.R.color.dark_red
+import com.comunidadedevspace.imc.R.color.green
+import com.comunidadedevspace.imc.R.color.yellow
 import org.w3c.dom.Text
 
 const val KEY_RESULT_IMC = "ResultActivity.KEY_IMC"
@@ -26,7 +35,9 @@ class ResultActivity : AppCompatActivity() {
         val tvclassificacao = findViewById<TextView>(R.id.tv_class)
         tvresult.text = result.toString()
 
-        val classificacao: String = if (result <= 18.5f) {
+
+
+        var classificacao: String = if (result <= 18.5f) {
             "MAGREZA"
         } else if (result > 18.5f && result <= 24.9f) {
             "NORMAL"
@@ -37,8 +48,11 @@ class ResultActivity : AppCompatActivity() {
         } else {
             "OBESIDADE GRAVE"
         }
+
+
         tvclassificacao.text = classificacao
 
 
     }
+
 }
