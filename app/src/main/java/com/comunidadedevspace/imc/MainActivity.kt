@@ -14,33 +14,33 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val edtpeso = findViewById<TextInputEditText>(R.id.edt_peso)
-        val edtaltura = findViewById<TextInputEditText>(R.id.edt_altura)
+        val edtweight = findViewById<TextInputEditText>(R.id.edt_weight)
+        val edtheight = findViewById<TextInputEditText>(R.id.edt_height)
 
-        val btncalcular = findViewById<Button>(R.id.button_calcular)
+        val btnevaluate = findViewById<Button>(R.id.button_evaluate)
 
 
-        btncalcular.setOnClickListener {
-            val pesostr: String = edtpeso.text.toString()
-            val alturastr: String = edtaltura.text.toString()
-            if (pesostr == "" && alturastr == "") {
+        btnevaluate.setOnClickListener {
+            val weight_str: String = edtweight.text.toString()
+            val height_str: String = edtheight.text.toString()
+            if (weight_str == "" && height_str == "") {
 
                 Snackbar.make(
-                    edtpeso,
-                    "Preencha todos os campos",
+                    edtweight,
+                    "Enter all necessary information",
                     Snackbar.LENGTH_LONG
                 )
                     .show()
 
             } else {
-                val peso = pesostr.toFloat()
-                val altura = alturastr.toFloat()
+                val weight_final = weight_str.toFloat()
+                val height_final = height_str.toFloat()
 
-                val alturaq2 = altura * altura
-                val resultado = peso / alturaq2
+                val height_q2 = height_final * height_final
+                val result_ibm = weight_final / height_q2
 
                 val intent = Intent(this, ResultActivity::class.java)
-                intent.putExtra(KEY_RESULT_IMC, resultado)
+                intent.putExtra(KEY_RESULT_BMI, result_ibm)
                 startActivity(intent)
 
             }

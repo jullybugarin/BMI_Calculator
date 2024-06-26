@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:text="Calculadora de IMC"
+            android:text="IBM Calculator"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -41,7 +41,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="30dp"
-            android:text="Confira abaixo o seu IMC e sua classificação."
+            android:text="Check bellow your IBM and your classification."
             android:textColor="@color/white" />
 
         <TextView
@@ -65,7 +65,7 @@
         android:id="@+id/tv_class_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A classificação do seu IMC é:"
+        android:text="The classification of your IBM is:"
         android:layout_marginTop="100dp"
         tools:layout_editor_absoluteX="175dp"
         tools:layout_editor_absoluteY="190dp"
