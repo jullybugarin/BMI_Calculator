@@ -1,19 +1,28 @@
-# Calculadora IMC
-Desc
+# BMI Calculator
+This project consists in the creation of a 'BMI Calculator' app, developed in Kotlin and with the finality of calculate and classify the BMI (Body Mass Index) according to the provided data.
 
 ## :camera_flash: Screenshots
-<!-- You can add more screenshots here if you like -->
-Screenshots
+<img src="https://github.com/jullybugarin/calculadoraIMC/assets/171982619/eaa00979-ba6d-45c2-8edf-dbbaebe71e4e" width=200/>  <img src="https://github.com/jullybugarin/calculadoraIMC/assets/171982619/9a47f5dc-7f79-4e9d-8bfc-ca20e6188224" width=200/>
 
-## Tecnologias
-Techs
+## Techs
+- Activity
+- Intent
+- SnackBar
+- ViewGroups
+  - LinearLayout
+  - ConstraintLayout
+- Views
+  - TextView
+  - ImageView
+  - EdtText
+  - Button
 
 
 ## License
 ```
 The MIT License (MIT)
 
-Copyright (c) 2023 Roque Buarque Junior
+Copyright (c) 2024 Jully Prechet Bugarin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
