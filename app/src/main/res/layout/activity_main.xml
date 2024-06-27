@@ -9,63 +9,63 @@
     <LinearLayout
         android:id="@+id/vg_header"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/gradiente_bg"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradiente_bg"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        
-    <ImageView
-        android:src="@drawable/monitor_weight_icon"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/monitor_weight_icon"
+            app:tint="@color/white" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:text="BMI Calculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:text="Enter your measurements to determine your BMI."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="30dp"
-            android:layout_marginTop="10dp"
+            android:text="Enter your measurements to determine your BMI."
             android:textColor="@color/white" />
 
     </LinearLayout>
-        
-        
+
+
     <Button
         android:id="@+id/button_evaluate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Evaluate"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_900"
+        android:text="Evaluate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="173dp"
-        android:backgroundTint="@color/primary_900"/>
+        tools:layout_editor_absoluteX="173dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         app:hintEnabled="false"
         app:layout_constraintTop_toBottomOf="@+id/vg_header"
         tools:layout_editor_absoluteX="1dp">
@@ -93,11 +93,11 @@
             android:id="@+id/edt_height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="4"
             android:background="@drawable/rounded_bg"
+            android:drawableEnd="@drawable/height_icon"
             android:hint="Fill in your height (m) ex: 1.70"
             android:inputType="numberDecimal"
-            android:drawableEnd="@drawable/height_icon"/>
+            android:maxLength="4" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
